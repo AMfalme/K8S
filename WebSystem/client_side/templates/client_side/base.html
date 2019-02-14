@@ -1,0 +1,180 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>
+	The Stepping Stones Elementary School| Welcome
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="The Stepping Stones Elementary School">
+    <meta name="keywords" content="The Stepping Stones, Kitengela, Elementary, Primary School">
+    <meta name="author" content="Griffin">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}">
+ 	<link rel="icon" type="image/png" href="{% static 'fav.png' %}"/>
+  	
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/animate.css' %}">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet"> -->
+
+
+     {% block extrahead %}
+
+
+     {% endblock %}
+    <!-- end css external stylesheets -->
+
+
+
+    <script type="text/javascript" src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <script src="{% static 'js/jquery.smooth-scroll.min.js' %}"></script> 
+    <script src="{% static 'js/jquery.mixitup.min.js' %}"></script> 
+    <script src="{% static 'js/theme.js' %}"></script> 
+    <!-- <script src="https://use.fontawesome.com/1c95b5a4bd.js"></script> -->
+</head>
+
+<body>
+
+<div class="body-wrap">
+
+    <nav class="navigation">
+        
+        <ul class="">
+            
+            <li class="menu-button">
+                <div class="strip"></div>
+                <div class="strip"></div>
+                <div class="strip"></div>
+                
+            </li>
+            <li>  
+                <div class="dropdown">
+                    <a class="dropbtn" href="admin">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Admin</span>
+                    </a>
+                    <!-- <div class="dropdown-content">
+                        <ul>
+                        <li><a href="contact.html"></a></li>
+                        
+                        </ul>
+                    </div> -->
+                </div> 
+            </li>
+            
+        
+           <!--  <li>  
+                <div class="dropdown">
+                     <a href="contact">Contact us</a>
+                    <a class="dropbtn"><i class="fa fa-child" aria-hidden="true"></i><span>Parents</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">News Letters</a>
+                        <a href="#">Uniform</a>
+                        <a href="#">Fee Structure</a>
+                    </div>
+                </div> 
+            </li> -->
+      
+            <li>  
+                <div class="dropdown dropdown-active">
+                    <a href="MeetTheTeam" class="dropbtn">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>  
+                       Meet the Team
+                        </span>
+                    </a>
+                    
+                </div> 
+            </li>
+             <li>  
+                <div class="dropdown dropdown-active">
+                    <a href="gallery" class="dropbtn">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>  
+                      Gallery
+                        </span>
+                    </a>
+                    
+                </div> 
+            </li>
+            <li>  
+                <div class="dropdown">
+                    <a href="contact" class="dropbtn">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        <span>Contact us</span>
+                    </a>
+                  <!--   <div class="dropdown-content ">
+                        <a href="applicationform" class="dropdown">Apply for a job</a>
+                        <a href="StudentApplication">Student? Join Us</a>
+                        <a href="#">Fee structure</a>
+                    </div> -->
+                </div> 
+            </li>
+        <!--     <li>  
+                <div class="dropdown">
+                    <a class="dropbtn">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <span>
+                            Learning
+                        </span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#">Curriculum</a>
+                        <a href="#">Co-Curricular</a>
+                        
+                    
+                    </div>
+                </div> 
+            </li> -->
+            <li>
+                <div class="dropdown">
+                    <a href="about" class="dropbtn">
+                        <i class="fa fa-info" aria-hidden="true"></i>
+                        <span>
+                            About us
+                        </span>
+                    </a>
+                   <!--  <div class="dropdown-content">
+                        <a href="contact">Contact us</a>
+                        <a href="MeetTheTeam">Meet The Team</a>
+                        <a href="gallery">Gallery</a>
+                    </div> -->
+                </div> 
+            </li>
+            <li>  
+                <div class="dropdown dropdown-active">
+                    <a href="/" class="dropbtn">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>  
+                            Home
+                        </span>
+                    </a>
+                    
+                </div> 
+            </li>
+
+        </ul>
+    </nav>
+	{% block mainblock %}
+
+
+
+    {% endblock %}
+
+{% block modals %}
+{% include 'client_side/modals.html' %}
+{% endblock %}
+</body>
+ <script type="text/javascript" src="{% static '/js/script.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/scroll-menu.js' %}"></script> 
+</html>

@@ -1,0 +1,187 @@
+{% block modals %}
+
+<div id="Login" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header contacts-top">
+            <button type="button" class="close btn btn-small btn-info" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title text-uppercase" id="myModalLabel">Contact US</h4>
+    </div>
+    <div class="modal-body contacts-body">
+    <div class="modal-info row">
+    <div class="col-md-6">
+        <form action="process.php" method="POST">
+                      <div class="form-group">
+                        <label for="InputEmail">Email address</label>
+                        <input type="email" name="User_Email" class="form-control" id="User_Email" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="User_Password" class="form-control" id="User_Password" placeholder="Password">
+                      </div>
+                      
+                      <button type="submit" name="login" class="btn btn-default">Submit</button>
+                </form>
+        
+    </div>
+    
+            </div>
+        </div>
+            <div class="modal-footer">
+               
+            </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="Contact_Us" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header contacts-top">
+            <button type="button" class="close btn btn-info" data-dismiss="modal" aria-hidden="true" style="color:ffcc00!important;opacity:1!important;">&times;</button>
+            <h4 class="modal-title text-uppercase" id="myModalLabel">Contact US</h4>
+    </div>
+    <div class="modal-body contacts-body">
+    <div class="modal-info row">
+    <div class="col-md-10">
+
+            <form class="contact" action="" method="POST" style="padding: 15px;">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="Contact_Name">Name</label><br>
+                        <input type="text" name="Contact_Name" class="form-control" id="Contact_Name" placeholder="Please Insert your name.">
+                    </div>
+                    <div class="form-group">
+                        <label for="Contact_Email">Email</label><br>
+                        <input type="email" class="form-control" id="Contact_Email" name="Contact_Email" placeholder="  Your Email address">
+                    </div>
+                
+                    
+                    <select class="form-control form-group form-group-lg col-sm-2" name="Contact_Role">
+                      <option>Parent</option>
+                      <option>Guest Or Visitor</option>
+                      <option>Alumni</option>
+                      <option>Investor</option>
+                      <option>Concerned citizen</option>
+                      <option>Staff</option>
+                      <option>Student</option>
+                    </select><br><br><br>
+                    <label for="Contact_Name">Comment Or suggestion</label>
+                        <textarea name="Contact_Comment" class="form-control" rows="2" cols="10"></textarea><br>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button name="Comment"  type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+                </form>
+
+    </div>
+   
+            </div>
+        </div>
+            <div class="modal-footer">
+               
+            </div>
+    </div>
+  </div>
+</div>
+<div id="Apply" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header contacts-top">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:ffcc00!important;opacity:1!important;">&times;</button>
+            <h4 class="modal-title text-uppercase" id="myModalLabel">Apply for a position</h4>
+    </div>
+    <div class="modal-body contacts-body">
+    <div class="modal-info row">
+    <div class="col-md-6">
+
+            <form class="contact" action="" method="POST" style="padding: 15px;">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="Apply_Name">Your Name</label><br>
+                        <input type="text" class="form-control" name="Apply_Name" id="Apply_Name" placeholder="Please Insert your name.">
+                    </div>
+                    <div class="form-group">
+                        <label for="Apply_Age">Your D.O.B</label><br>
+                        <input type="number" class="form-control" name="Apply_Age" id="Apply_Age" placeholder="  Your Date OF Birth">
+                    </div>
+                
+                    <div class="form-group">
+                    <label for="Apply_gender">Your Gender</label><br>
+                    <select class="form-control form-group form-group-lg col-sm-2" name="Apply_Gender">
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Apply_Nationality">Your Nationality</label><br>
+                        <input type="text" name="Apply_Nationality" class="form-control" id="Apply_Nationality" placeholder="Please Insert your Nationality.">
+                    </div>
+                    <div class="form-group">
+                        <label for="Apply_class">Which Class are you applying for?</label><br>
+                        <input type="text" name="Apply_Class" class="form-control" id="Apply_class" placeholder="Class Applying for.">
+                    </div>
+                    <div class="form-group">
+                        <label for="Apply_Guardian">Guardian or Parent's Full Names</label><br>
+                        <input type="text" name="Apply_Guardian" class="form-control" id="Apply_Guardian" placeholder="Please Insert your name.">
+                    </div>
+                    <div class="form-group">
+                        <label for="Apply_Guardno">Guardian or Parent's Phone No.</label><br>
+                        <input type="text" name="Apply_Guardno" class="form-control" id="Apply_Guardno" placeholder="Please Insert your name.">
+                    </div>
+                    <div class="form-group">
+                        <label for="Apply_Email">Guardian or Parent's Email address.</label><br>
+                        <input type="text" name="Apply_Email" class="form-control" id="Apply_Email" placeholder="Please Insert your name.">
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                    <label for="Apply_Comment">Comment Or suggestion</label>
+                        <textarea name="Apply_Comment" class="form-control" rows="2"></textarea><br>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button name="Apply" type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+                </form>
+
+    </div>
+    <div class="col-md-6">
+       
+    </div>
+            </div>
+        </div>
+            <div class="modal-footer">
+               
+            </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Principal Message</h4>
+      </div>
+      <div class="modal-body">
+            <p class="message">The Stepping Stones Elementary School is not just the usual setting designed for acquisition of literacy but an institution where self awareness is aroused and illuminated, refined and strengthened, a place where seeds of integrity and duty are sown and natured into  fruition
+                                    National goals and policies of education are objectively super but the means of achieving them is left solely to the schools. 
+                                   
+                                   
+                                    Implementation varies from school to school. We have innovated differentiated ways of imparting knowledge as well as transforming character in pursuit of holiness.
+                                    Our staff members are the real beacons of light as they drive the main agenda of building on our vision and the core values. We have put in place infrastructure that is in line with the requirements prescribed by the developers of the new curriculum. Together with all the stakeholders we have and will always produce unique and unmatched products.
+                                            </p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+{% endblock%}

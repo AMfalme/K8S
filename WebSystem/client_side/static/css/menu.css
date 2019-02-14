@@ -1,0 +1,212 @@
+.admin-navigation, .navigation {
+	z-index:1;
+	position: fixed;
+	float: right;
+	width: 100%;
+	color: white;
+	background-color: transparent;
+	margin: 0;
+    top: 0;
+    min-height: 50px;
+}
+.navigation-menu{
+    background-color: maroon;
+}
+.admin-navigation{
+    width:73%;
+    float: right;
+    right: 0px;
+    background-color: #0e9a1f;
+    margin: 0px auto;
+}
+.admin-navigation ul , .navigation ul {  
+	float: right;
+	list-style: none;
+	margin: 0;
+padding: 0;
+
+}
+.right-align h5{
+    color: #bf1515;
+    
+    font-weight: 800;
+}
+.admin-navigation ul li, .navigation ul li {
+	display: inline;
+	float: right;
+}
+
+
+.admin-navigation ul li ul li, .navigation ul li ul li{
+	display: block;
+	float: left;
+
+}
+.admin-navigation .dropdown-content a:link{
+    color: #fff;
+}
+.admin-navigation .dropdown-content a:link:hover{
+    color: maroon;
+}
+
+.admin-navigation a{
+    color: ;
+}
+.admin-navigation a,.navigation a {
+	text-decoration: none;
+	outline: none;
+
+}
+.admin-navigation .dropdown{
+    padding: 8px;
+}
+.navigation img {
+    display: block;
+	float: left;
+	width: 10%;
+}
+
+.navigation a:link { 
+	color: white;	
+}
+
+.navigation a:visited { 
+	color: white;
+}
+
+.navigation a:hover { 
+	color: #fff;
+}
+.admin-navigation a:link, .admin-navigation a:link span{
+    color: white;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+ padding: 0 5px;
+ 
+}
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/*------------
+Responsive code for the menu bar
+Styles for screen  585px and lower
+---------------------------------*/
+
+@media screen and (max-width: 585px) {
+.dropdown{
+   display: none;
+}
+
+.column{
+    width: 100%;
+}
+.navigation a i{
+    display: block;
+}
+.menu-button{
+    display: block !important;
+}
+.strip{
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 5px;
+}  
+.sectOne h1 {  
+    font-size: 1.9em;
+}
+.overlay h1{
+    font-size: 30px;
+}
+}
+
+@media screen and (max-width: 735px) {
+
+    .dropbtn{
+        padding: 0px;
+    }
+
+}
+
+
+
+.dropdown a i{
+font-size: 25px;
+margin-right: 4px;
+
+}
+.dropdown::before{
+	content: '';
+    position: absolute;
+    border-top: 2px #fff solid;
+    border-bottom: 2px #fff solid; 
+    min-width: 100px;
+    left: 20px;
+    -webkit-transform: translate3d(-80px,0,0);
+    transform: translate3d(-80px,0,0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    margin: -12px;
+    opacity: 0;
+}
+.dropdown-active::before, .dropdown:hover::before {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
+    
+}
+
+.dropdown-content {
+	
+    display: none;
+    position: absolute;
+    background-color: maroon;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.padding-out{
+    padding: 0px -15px 0px -15px; 
+}
+
+.dropdown-content a:hover {
+	background-color: rgb(255, 255,455);
+	color: maroon;
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.navigation:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navigation-scroll:after{
+    -webkit-transition-duration: 5s;
+    transition-duration: 2s;
+    background-color:maroon;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
