@@ -1,3 +1,7 @@
+
+<!-- Contact us page Body section -->
+
+
 <!DOCTYPE html>
 <html>
 
@@ -11,23 +15,33 @@
     <meta name="description" content="The Stepping Stones Elementary School">
     <meta name="keywords" content="The Stepping Stones, Kitengela, Elementary, Primary School">
     <meta name="author" content="Griffin">
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css"> 
-    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/menu.css">
- 	<link rel="icon" type="image/png" href="assets/fav.png"/>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+ 	<link rel="icon" type="image/png" href="/static/fav.png"/>
   	
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/animate.css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet"> -->
-    <script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <script src="assets/js/jquery.smooth-scroll.min.js"></script> 
-    <script src="assets/js/jquery.mixitup.min.js"></script> 
-    <script src="assets/js/theme.js"></script> 
+
+
+     
+
+
+     
+    <!-- end css external stylesheets -->
+
+
+
+    <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/wow.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+    <script src="/static/js/jquery.smooth-scroll.min.js"></script> 
+    <script src="/static/js/jquery.mixitup.min.js"></script> 
+    <script src="/static/js/theme.js"></script> 
     <!-- <script src="https://use.fontawesome.com/1c95b5a4bd.js"></script> -->
 </head>
 
@@ -47,7 +61,7 @@
             </li>
             <li>  
                 <div class="dropdown">
-                    <a class="dropbtn" href="admin.html">
+                    <a class="dropbtn" href="admin">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <span>Admin</span>
                     </a>
@@ -61,8 +75,9 @@
             </li>
             
         
-            <li>  
+           <!--  <li>  
                 <div class="dropdown">
+                     <a href="contact">Contact us</a>
                     <a class="dropbtn"><i class="fa fa-child" aria-hidden="true"></i><span>Parents</span></a>
                     <div class="dropdown-content">
                         <a href="#">News Letters</a>
@@ -70,24 +85,44 @@
                         <a href="#">Fee Structure</a>
                     </div>
                 </div> 
-            </li>
-        
-        
-        
+            </li> -->
+      
             <li>  
-                <div class="dropdown">
-                    <a href="contact.html" class="dropbtn">
-                        <i class="fa fa-question-circle" aria-hidden="true"></i>
-                        <span>Enquiries</span>
+                <div class="dropdown dropdown-active">
+                    <a href="MeetTheTeam" class="dropbtn">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>  
+                       Meet the Team
+                        </span>
                     </a>
-                    <div class="dropdown-content ">
-                        <a href="applicationform.html" class="dropdown">Apply for a job</a>
-                        <a href="StudentApplication.html">Student? Join Us</a>
-                        <a href="#">Fee structure</a>
-                    </div>
+                    
+                </div> 
+            </li>
+             <li>  
+                <div class="dropdown dropdown-active">
+                    <a href="gallery" class="dropbtn">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>  
+                      Gallery
+                        </span>
+                    </a>
+                    
                 </div> 
             </li>
             <li>  
+                <div class="dropdown">
+                    <a href="contact" class="dropbtn">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        <span>Contact us</span>
+                    </a>
+                  <!--   <div class="dropdown-content ">
+                        <a href="applicationform" class="dropdown">Apply for a job</a>
+                        <a href="StudentApplication">Student? Join Us</a>
+                        <a href="#">Fee structure</a>
+                    </div> -->
+                </div> 
+            </li>
+        <!--     <li>  
                 <div class="dropdown">
                     <a class="dropbtn">
                         <i class="fa fa-book" aria-hidden="true"></i>
@@ -102,25 +137,25 @@
                     
                     </div>
                 </div> 
-            </li>
+            </li> -->
             <li>
                 <div class="dropdown">
-                    <a href="about.html" class="dropbtn">
+                    <a href="about" class="dropbtn">
                         <i class="fa fa-info" aria-hidden="true"></i>
                         <span>
                             About us
                         </span>
                     </a>
-                    <div class="dropdown-content">
-                        <a href="contact.html">Our Location</a>
-                        <a href="MeetTheTeam.html">Meet The Team</a>
-                        <a href="gallery.html">Gallery</a>
-                    </div>
+                   <!--  <div class="dropdown-content">
+                        <a href="contact">Contact us</a>
+                        <a href="MeetTheTeam">Meet The Team</a>
+                        <a href="gallery">Gallery</a>
+                    </div> -->
                 </div> 
             </li>
             <li>  
                 <div class="dropdown dropdown-active">
-                    <a href="index.html" class="dropbtn">
+                    <a href="/" class="dropbtn">
                         <i class="fa fa-home" aria-hidden="true"></i>
                         <span>  
                             Home
@@ -132,117 +167,116 @@
 
         </ul>
     </nav>
+	
 
-<!-- About us page Body section -->
 
 
-<div class="top-placed">
-    
 </div>
-<div class="overlay">
-    <h1 style="">
-    Our Profile </h1><br>
-    <span style="font-weight: bolder;"> The Stepping Stones Elementary School  </span>
+<div class="schoolmap">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4921898663083!2d36.96702611447705!3d-1.4772915989226292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f9fec6187e187%3A0x54ff755c7ff98926!2sStepping+Stone+Academy+Kitengela!5e0!3m2!1sen!2ske!4v1488977263552" width="100%" frameborder="0" style="border:0; height: 100%;" allowfullscreen></iframe>
+</div>
+<div class="container-fluid">
+<div class="row translate">
+        <div class="contact col-md-6 ">
+    <div class="icos shadow  wow fadeInDown animated" data-wow-duration="2s" >
+    <div>
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+        <h5> Kindly, Leave a comment</h5>
+    </div>
+                <form class="contactus" method="POST" action="/contact.html">
+                <input type="text" placeholder="Your name" name="name">
+                <input type="email" placeholder="your email address">
+                <textarea placeholder="your comment">
+                    
+                </textarea>
+                <input type="submit" value="Send" class="btn btn-success btn-sm">
+             
+                </form>
+              
+
+                </div>
+    </div>
+    <div class="comment col-md-6">
+               <div class="">
+                <h1 class=" wow slideInRight animated" data-wow-delay="3s" data-wow-duration="2s">
+                    We
+                    <br> appreciate<br> your feedback
+                </h1>
+
+                <h5>
+                    Kindly, Leave a comment
+                </h5>
+            </div>
+           
+    </div>
+</div>
+</div>
+
+
  
 </div>
-<div class="container">
-    <div class="row">
-        <div class="mission">
-            <h5>
-                Mission:
-            </h5>
-            <blockquote class="text-center icos values padd-top mission">
-                            <q>
-                                     To train our students to become independent learners by equipping them with the necessary skills which will give them the ability to be good listeners, readers, speakers, researchers, innovators and problem solvers
-                            </q>
-                    </blockquote>
+
+<div class="side-menu">
+
+    <ul>
+        <a href="index.html"><li class="active">
+
+        <i class="fa fa-home" aria-hidden="true"></i>
+        Home</li></a>
+        <div class="links">
+            <a href="welcome.html"><li>Welcome</li></a>
+            
+            <a href="contact.html"><li>location</li></a>
+        </div> 
+        <a href="about.html"><li class="active">
+                <i class="fa fa-info" aria-hidden="true"></i>
+                About</li></a>
+        <div class="links">
+            <a href="contact.html"><li>location</li></a>
+            <a href="MeetTheTeam.html"><li> Meet The Team</li></a>
+            <a href="gallery.html"><li>Gallery</li></a>
+            
+        </div> 
+        <a href="#"><li class="active">
+            
+            <i class="fa fa-book" aria-hidden="true"></i>
+        Learning</li></a>
+        <div class="links">
+            <a href="#"><li>Curriculum</li></a>
+            <a href="#"><li>Co-Curriculum</li></a>
+            <a href="#"><li>Facilities</li></a>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="mission">
-            <h5 style="float: right;">
-                Vision:
-            </h5>
-            <blockquote class="text-center icos values padd-top mission" style="clear: both;">
-                            <q>
-                                To inspire all our students to learn, grow, connect and thrive holistically as life-long learners and be a center of excellence.
-                            </q>
-                    </blockquote>
+        <a href="contact.html"><li class="active">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+        Enquiries</li></a>
+        <div class="links">
+                <a href="applicationform.html"><li>Apply for a job</li></a>
+                <a href="StudentApplication.html"><li>Student?Join us</li></a>
+                <a href="#"><li>Fee structure</li></a>
+        </div>      
+        <a href="#"><li>Parents</li></a>
+        <div class="links">
+            
+            <a href="#"><li>Our Uniform</li></a>
+            <a href="#"><li>Fee structure</li></a>
         </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
         
-            <div class="icon">
-                <div class="aims">
-                    <h5>
-                        Aims and Objectives:
-                    </h5>
-                    <ol class="text-left">
-                        <li>To clearly communicate to the students both orally and practically, information as prescribed in the curriculum and any other information that will impact knowledge.</li><br>
-                        <li>To stir the children to a point of becoming self-driven, and desiring success through hard work.</li>
-                        <li>To create a learning environment that promotes mastery of essential skills at every level.</li>
-                        <li>To connect with our community who are our partners in all aspects to ensure what we pass on to the students is upheld both in school and outside of school.</li>
-                        <li>To create a culture of nobility.</li> <br>
-                 
-                    </ol>
-                    <div class="clear"></div>
-                </div>
-            </div>
-    </div>
+        <a href="adminlog.html"><li>Admin</li></a>
+        
+        
+        
+    </ul>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="reason">
-                <p>
-                    At the Stepping Stones Elementary school, we realize our pupil's futures rest in our hands. We provide them with a safe and secure environment that encourages them to realize their full potential. for us, it is vital to prepare our pupils to excel and flourish beyond Stepping Stones school. As a center of excellence, our standards are high and we strive to make learning exciting and holistic while ensuring that the pupils have the confidence to firmly grasp problems and develop solutions. The Kindergarten caters for children between the age of three to six years in a friendly learning environment where play is integral with a rich blend of academic and co-curricular activities. craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. 
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="icon" style="padding-top: 55px;">
-    <div class="container ">
-    <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-6">
-            <div class="catalouge firstRow firstColumn newsLetter">
-                <div class="tagsCatalouge">
-                    <div class="tagTop">Term three Newsletter</div>
-                    <div class="tagBottom"> <a href="static/NEWSLETTER_TERM_2 _2017.docx" download> Read Newsletter...</div>
-                </div>
-                <h3>Term Three Newsletter 2017</h3>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-6">
-            <div class="catalouge firstRow firstColumn glance">
-                <div class="tagsCatalouge">
-                    <div class="tagTop">Stepping Stones At A Glance</div>
-                    <div class="tagBottom">See More...</div>
-                </div>
-                <h3>Stepping Stones At A Glance</h3>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-6">
-        <div class="catalouge firstRow firstColumn festival">
-                <div class="tagsCatalouge">
-                    <div class="tagTop">Music Festival 2017</div>
-                    <div class="tagBottom">View pictures...</div>
-                </div>
-                <h3>Music Festival 2017</h3>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+
+
+
+
+
 
 
 
 <footer class="learningFooter">
-<div class = "column logo"><img src="assets/images/Badge-Final.png" alt="The Stepping Stones Elementary School"></div>
+<div class = "column logo"><img src="static/images/Badge-Final.png" alt="The Stepping Stones Elementary School"></div>
 <div class="column Academics"><nav>
     <ul>
     <li><h3>Academics</h3></li>
@@ -264,13 +298,18 @@
             telephone: +254452121149
 
             
-            ?></li>
-        <li class="socioicons"><a href="https://www.facebook.com/The-Stepping-Stones-Elementary-School-864457983605810/"><img src="assets/images/005-social.png" ></a></li>
-        <li class="socioicons"><a href="https://www.instagram.com/thesteppingstoneselementary/"><img src = "assets/images/003-twitter-logo-button.png"></a></li>
-        <li class="socioicons"><a href="https://www.linkedin.com/in/thesteppingstones-elementary-52276914b/"><img src = "assets/images/001-linkedin-logo-button.png"></a></li>
+            </li>
+        <li class="socioicons"><a href="https://www.facebook.com/The-Stepping-Stones-Elementary-School-864457983605810/"><img src="static/images/005-social.png" ></a></li>
+        <li class="socioicons"><a href="https://www.instagram.com/thesteppingstoneselementary/"><img src = "static/images/003-twitter-logo-button.png"></a></li>
+        <li class="socioicons"><a href="https://www.linkedin.com/in/thesteppingstones-elementary-52276914b/"><img src = "static/images/001-linkedin-logo-button.png"></a></li>
     </ul></nav></div>
     <div style="clear: both;"></div>
 </footer>
+
+
+
+
+
 
 
 <div id="Login" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -457,7 +496,9 @@
     </div>
   </div>
 </div>
+
+
 </body>
- <script type="text/javascript" src="assets/js/script.js"></script>
-<script type="text/javascript" src="assets/js/scroll-menu.js"></script> 
+ <script type="text/javascript" src="/static/js/script.js"></script>
+<script type="text/javascript" src="/static/js/scroll-menu.js"></script> 
 </html>
