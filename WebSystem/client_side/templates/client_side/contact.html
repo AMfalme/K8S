@@ -1,0 +1,113 @@
+<!-- Contact us page Body section -->
+{% extends 'client_side/base.html' %}
+{% load static %}
+
+
+{% block mainblock %}
+
+
+
+</div>
+<div class="schoolmap">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4921898663083!2d36.96702611447705!3d-1.4772915989226292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f9fec6187e187%3A0x54ff755c7ff98926!2sStepping+Stone+Academy+Kitengela!5e0!3m2!1sen!2ske!4v1488977263552" width="100%" frameborder="0" style="border:0; height: 100vh;position: relative;display: block;" allowfullscreen></iframe>
+</div>
+<div class="container-fluid">
+<div class="row translate">
+        <div class="contact col-md-6 ">
+    <div class="icos shadow  wow fadeInDown animated" data-wow-duration="2s" >
+    <div>
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+        <h5> Kindly, Leave a comment</h5>
+    </div>
+                <form id="contactus" class="contactus" method="POST" action="/contactus">
+                    {% csrf_token %}
+                <input type="text" placeholder="Your name" name="name">
+                <input type="email" placeholder="your email address" name="email">
+                <textarea placeholder="your comment" name="message">
+                    
+                </textarea>
+                <input type="submit" value="Send" class="btn btn-success btn-sm" id="contact-submit">
+             
+                </form>
+              
+
+                </div>
+                <div class="response">
+                    
+                </div>
+    </div>
+    <div class="comment col-md-6">
+               <div class="">
+                <h1 class=" wow slideInRight animated" data-wow-delay="3s" data-wow-duration="2s">
+                    We
+                    <br> appreciate<br> your feedback
+                </h1>
+
+                <h5>
+                    Kindly, Leave a comment
+                </h5>
+            </div>
+           
+    </div>
+</div>
+</div>
+
+
+ 
+</div>
+
+<div class="side-menu">
+
+    <ul>
+        <a href="index.html"><li class="active">
+
+        <i class="fa fa-home" aria-hidden="true"></i>
+        Home</li></a>
+        <div class="links">
+            <a href="welcome.html"><li>Welcome</li></a>
+            
+            <a href="contact.html"><li>location</li></a>
+        </div> 
+        <a href="about.html"><li class="active">
+                <i class="fa fa-info" aria-hidden="true"></i>
+                About</li></a>
+        <div class="links">
+            <a href="contact.html"><li>location</li></a>
+            <a href="MeetTheTeam.html"><li> Meet The Team</li></a>
+            <a href="gallery.html"><li>Gallery</li></a>
+            
+        </div> 
+        <a href="#"><li class="active">
+            
+            <i class="fa fa-book" aria-hidden="true"></i>
+        Learning</li></a>
+        <div class="links">
+            <a href="#"><li>Curriculum</li></a>
+            <a href="#"><li>Co-Curriculum</li></a>
+            <a href="#"><li>Facilities</li></a>
+        </div>
+        <a href="contact.html"><li class="active">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+        Enquiries</li></a>
+        <div class="links">
+                <a href="applicationform.html"><li>Apply for a job</li></a>
+                <a href="StudentApplication.html"><li>Student?Join us</li></a>
+                <a href="#"><li>Fee structure</li></a>
+        </div>      
+        <a href="#"><li>Parents</li></a>
+        <div class="links">
+            
+            <a href="#"><li>Our Uniform</li></a>
+            <a href="#"><li>Fee structure</li></a>
+        </div>
+        
+        <a href="adminlog.html"><li>Admin</li></a>
+        
+        
+        
+    </ul>
+</div>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+
+{% endblock %}
