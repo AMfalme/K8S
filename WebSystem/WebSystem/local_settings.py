@@ -13,7 +13,8 @@ ALLOWED_HOSTS = [
     "duara.io",
     "duara.io.10.0.0.2.xip.io",
     "127.0.0.1",
-    "192.168.143.19"
+    "192.168.143.19",
+    "102.164.56.58"
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
