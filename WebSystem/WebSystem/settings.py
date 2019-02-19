@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -24,7 +24,12 @@ SECRET_KEY = '3y9md7110x_qeq&j2@=5&mt_0fonw^oqn8mb*)g#p*uyhf21(9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+
 ALLOWED_HOSTS = []
 
 
@@ -115,10 +120,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
 # LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
 LANDING_PAGE_INQUIRY_RECIPIENT = "mfalmegriffin@gmail.com"
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@gmail.com"
