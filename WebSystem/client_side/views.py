@@ -6,10 +6,10 @@ from django.core.validators import validate_email
 from django.core.mail import send_mail
 from django.views.decorators.http import require_http_methods
 from django.core.exceptions import ValidationError
-import responses
 from django.http import HttpResponse, JsonResponse
 import json
-
+import responses 
+from smtplib import SMTPException
 # Create your views here.
 
 
