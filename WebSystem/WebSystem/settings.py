@@ -23,12 +23,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = '3y9md7110x_qeq&j2@=5&mt_0fonw^oqn8mb*)g#p*uyhf21(9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
 
 ALLOWED_HOSTS = []
 
@@ -36,6 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'WebSystem',
     'client_side',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -60,13 +62,15 @@ ROOT_URLCONF = 'WebSystem.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'client_side'),
+                os.path.join(BASE_DIR, "WebSystem")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                # 'django.core.context_processors.static',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
