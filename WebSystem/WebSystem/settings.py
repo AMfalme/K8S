@@ -135,7 +135,7 @@ EMAIL_HOST_PASSWORD = 'password'
 
 
 # Duara Settings
-LANDING_PAGE_INQUIRY_RECIPIENT = "info@tsses.sc.ke"
+LANDING_PAGE_INQUIRY_RECIPIENT = "mfalmegriffin@gmail.com"
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@tsses.sc.ke"
 
 
