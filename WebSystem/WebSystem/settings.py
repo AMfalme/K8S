@@ -122,11 +122,26 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+# Configure SMTP
+# NO_REPLY_EMAIL_HOST='smtpserver'
+# NO_REPLY_EMAIL_PORT=587
+# NO_REPLY_EMAIL_HOST_USER="noreply_email"
+# NO_REPLY_EMAIL_HOST_PASSWORD="password"
+
+EMAIL_HOST = 'smtpserver'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "noreply_email"
+EMAIL_HOST_PASSWORD = 'password'
+
+
+# Duara Settings
+LANDING_PAGE_INQUIRY_RECIPIENT = "info@tsses.sc.ke"
+LANDING_PAGE_INQUIRY_SENDER = "no-reply@tsses.sc.ke"
 
 
 
 # LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
-LANDING_PAGE_INQUIRY_RECIPIENT = "mfalmegriffin@gmail.com"
+LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@gmail.com"
 
 try:
