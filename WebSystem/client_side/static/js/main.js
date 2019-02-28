@@ -34,7 +34,7 @@ $(function() {
       e.preventDefault();
       var form = $(this);
       var data = getFormData(form);
-
+      data.message = $("#sendMailFormMessage").val();
      
       $.ajax({
             type: "POST",
