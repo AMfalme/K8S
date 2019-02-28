@@ -153,7 +153,8 @@ USE_TZ = True
 # NO_REPLY_EMAIL_HOST_USER="noreply_email"
 # NO_REPLY_EMAIL_HOST_PASSWORD="password"
 
-EMAIL_HOST = 'smtpserver'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "noreply_email"
 EMAIL_HOST_PASSWORD = 'password'
