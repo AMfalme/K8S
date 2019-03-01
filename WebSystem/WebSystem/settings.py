@@ -167,7 +167,7 @@ LANDING_PAGE_INQUIRY_SENDER = "no-reply@tsses.sc.ke"
 
 
 # LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
-LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
+#LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@gmail.com"
 
 try:
