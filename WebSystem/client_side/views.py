@@ -12,6 +12,13 @@ import responses
 from smtplib import SMTPException
 # Create your views here.
 
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
+
+
 
 @require_http_methods(["GET"])
 def index(request):
