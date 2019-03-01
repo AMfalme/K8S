@@ -45,6 +45,7 @@ def contactus(request):
 
     try:
         data = json.loads(request.body.decode('utf-8'))
+        print(data)
         name = data["name"]
         email = data["email"]
         message = data["message"]
@@ -54,10 +55,10 @@ def contactus(request):
         validate_email(email)
     except (ValidationError, KeyError, ValueError) as e:
         # logger.warning(e)
-        error = LANDING_PAGE_ERROR["bad_input"]
+        error = responses.LANDING_PAGE_ERROR["bad_input"]
         return JsonResponse({
             "message" : None,
-            "error" : LANDING_PAGE_ERROR["bad_input"]
+            "error" : responses.LANDING_PAGE_ERROR["bad_input"]
         })
 
 
