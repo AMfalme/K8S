@@ -35,7 +35,7 @@ $(function() {
       var form = $(this);
       var data = getFormData(form);
       data.message = $("#sendMailFormMessage").val();
-     
+     console.log(data)
       $.ajax({
             type: "POST",
             contentType: "application/json",
@@ -46,7 +46,7 @@ $(function() {
             data: JSON.stringify(data),
             success: function (response, status) {
               if (response.error) {
-                console.log(response)
+                console.log(data)
               }
               else {
                 console.log('success')

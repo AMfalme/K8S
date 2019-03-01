@@ -48,6 +48,7 @@ def contactus(request):
         name = data["name"]
         email = data["email"]
         message = data["message"]
+        print(message)
         if not (name and message):
             raise ValidationError("Missing either 'name' or 'message'")
         validate_email(email)
