@@ -49,7 +49,6 @@ def contactus(request):
         name = data["name"]
         email = data["email"]
         message = data["message"]
-        print(message)
         if not (name and message):
             raise ValidationError("Missing either 'name' or 'message'")
         validate_email(email)
@@ -86,8 +85,8 @@ def contactus(request):
         )
         response_message = responses.LANDING_PAGE_MESSAGE["inquiry_email_send_success"]
     except SMTPException as e:
-        # logger.error("Failed to send email inquiry")
-        # logger.error(e)
+        logger.error("Failed to send email inquiry")
+        logger.error(e)
         error = responses.LANDING_PAGE_ERROR["contact_form_email_send_failure"]
 
     return JsonResponse({
