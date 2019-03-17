@@ -274,7 +274,7 @@ bottom: 0;
  .sectOne h1{
     margin-left: 75px;
     padding-top: 12%;
-    font-size: 4.2em;
+    font-size: 3.2em;
     font-weight: 800;
     text-align: left;
     color: white;
@@ -284,7 +284,7 @@ bottom: 0;
     margin-left: 50px;
 padding-top: 3%;
 padding-bottom: 2%;
-font-size: 2.3em;
+font-size: 1.93em;
 font-weight: 200;
 font-style: italic;
 text-align: left;
@@ -400,7 +400,7 @@ margin-right: 10px;
  }
  
  .leftButton{
-     left: 18%;
+     left: 5%;
 color: white;
 border: 2px solid white;
 
@@ -1380,13 +1380,16 @@ clear: both;
     padding: 60px 60px 30px 60px;
 }
 .principal p{
-    width: 77%;
+    width: 60%;
+    font-size: 18px;
+    padding: 40px 0;
 }
 .tagTop{
     color: white;
-    font-size: 1.2em;
-     padding: 25px 15px 25px 40px;
+    font-size: 14px;
+    padding: 15px;
     background-color: rgba(95, 17, 28,1);
+}
 }
 .topic{
     margin-left: 75px;
@@ -1396,9 +1399,15 @@ text-align: left;
 color: rgb(18,18,18);
 
 }
+.caption{
+    float: right;
+   
+    font-style: italic;
+    margin-top: -50px;
+}
 .tagBottom{
     color: white;
-    font-size: 1.2em;
+    font-size: 14px;
      padding: 25px 15px 25px 40px;
     background-color: rgba(18,18,18,0.65);
     transition: background-color 750ms linear;
@@ -1422,9 +1431,9 @@ cursor: pointer;
 
 .catalouge h3{
     color: #fff;
-    font-size: 2.3em;
-padding: 5px;
-text-align: left;
+    font-size: 1.2em;
+    padding: 5px;
+    text-align: left;
 }.tagsCatalouge{
 left: 27%;
 top: -26%;
@@ -1549,6 +1558,7 @@ margin-top: -195px;
 overflow: hidden;
     font-size: 0.65em;
     right: 45px;
+    bottom: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1927,9 +1937,8 @@ padding: 25px;
  .button{
      left: 1.5%;
      font-size: 1.2em;
-     padding: 10px 30px 10px 30px;
+     padding: 10px 60px;
      border-radius: 5px;
-     position:absolute;
  }
  
   .yellowbutton{
@@ -1970,8 +1979,8 @@ padding: 25px;
 
 .catalouge{
      clear:right;
-     float:Left;
-     width: 25%;
+     float:left;
+     width: 100%;
      padding: 60px 0 60px 0;
      text-align: Center;
      font-size:1.5em;

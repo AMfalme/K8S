@@ -34,6 +34,7 @@ padding: 0;
 .admin-navigation ul li, .navigation ul li {
 	display: inline;
 	float: right;
+    margin-top: 10px;
 }
 
 
