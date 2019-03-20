@@ -32,7 +32,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
 
 ALLOWED_HOSTS = ['102.164.56.58',
-                "thesteppingstoneselementaryschool.sc.ke"
+                "thesteppingstoneselementaryschool.sc.ke",
+                "www.thesteppingstoneselementaryschool.sc.ke"
 ]
 
 
@@ -163,7 +164,7 @@ EMAIL_HOST_PASSWORD = 'Forgetmenot@1'
 
 
 # Duara Settings
-LANDING_PAGE_INQUIRY_RECIPIENT = "mfalmegriffin@gmail.com"
+LANDING_PAGE_INQUIRY_RECIPIENT = "lkitala@yahoo.co.ke"
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@tsses.sc.ke"
 
 

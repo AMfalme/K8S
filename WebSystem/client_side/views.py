@@ -80,7 +80,7 @@ def contactus(request):
             )
 
 
-    subject = "Website Inquiry: %s" % data["email"]
+    subject = "Website Inquiry Contact us Page"
 
     try:
         send_mail(
