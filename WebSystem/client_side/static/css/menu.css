@@ -158,6 +158,8 @@ margin-right: 4px;
     transition: transform 0.5s;
     margin: -12px;
     opacity: 0;
+    width: 100%;
+    
 }
 .dropdown-active::before, .dropdown:hover::before {
     -webkit-transform: translate3d(0,0,0);

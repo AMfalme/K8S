@@ -245,7 +245,7 @@ float: left;
 
 
 .sect {
-     height: 100%;
+     height: 90vh;
      background-size: cover;
      background-attachment: fixed; 
      position: relative;
@@ -254,7 +254,7 @@ float: left;
 
 
 .sectOne{
-     background-image: url("../images/Landing_Page_Img.jpg");min-height: 610px;
+     background-image: url("../images/Landing_Page_Img.jpg");min-height: 95vh;
  }
 .sect:before{
     content: '';
@@ -1431,12 +1431,12 @@ cursor: pointer;
 
 .catalouge h3{
     color: #fff;
-    font-size: 1.2em;
+    font-size: 16px     ;
     padding: 5px;
     text-align: left;
 }.tagsCatalouge{
 left: 27%;
-top: -26%;
+top: -87%;
 width: 70%;
 position: relative;
 font-size: 0.65em;
@@ -1527,6 +1527,7 @@ min-height: 422px;
     text-align: left;
     text-decoration: none;
     color: whitesmoke;
+    font-size: 14px;    
 }
 }
 
@@ -1554,30 +1555,30 @@ min-height: 422px;
    width: 250px;
    
    float: right;
-margin-top: -195px;
+    top: 85vh;
 overflow: hidden;
     font-size: 0.65em;
     right: 45px;
-    bottom: 0;
+ 
 }
 
 @media screen and (max-width: 1200px) {
-.tags{
+/*.tags{
 margin-top: -215px;
-}
+}*/
 }
 @media screen and (max-width: 945px) {
-    .tags{
+   /* .tags{
         margin-top: -235px;
-    }
+    }*/
      .aims ol{
         width: 80%;
     }
 }
 @media screen and (max-width: 775px) {
-    .tags{
+    /*.tags{
         margin-top: -255px;
-    }
+    }*/
     .reason{
         font-size: 15px;
     }
@@ -1586,29 +1587,29 @@ margin-top: -215px;
     }
 }
 @media screen and (max-width: 674px) {
-    .tags{
+    /*.tags{
         margin-top: -275px;
-    }
+    }*/
 }
 @media screen and (max-width: 598px) {
-    .tags{
+   /* .tags{
         margin-top: -295px;
-    }
+    }*/
 }
 @media screen and (max-width: 532px) {
-    .tags{
+   /* .tags{
         margin-top: -315px;
-    }
+    }*/
 }
 @media screen and (max-width: 500px) {
-    .tags{
+   /* .tags{
         margin-top: -335px;
-    }
+    }*/
 }
 @media screen and (max-width: 448px) {
-    .tags{
+   /* .tags{
         margin-top: -335px;
-    }
+    }*/
 }
 
 @media screen and (max-width: 476px) {
