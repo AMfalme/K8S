@@ -52,16 +52,18 @@ def contactus(request):
 
     try:
         data = json.loads(request.body.decode('utf-8'))
-        print(data)
         name = data["name"]
         email = data["email"]
         message = data["message"]
-        if not (name and message):
-            raise ValidationError("Missing either 'name' or 'message'")
+        if not (name):
+            raise ValidationError("Missing 'name'")
+        elif not (message):
+            raise ValidationError("Missing'message'")
         validate_email(email)
     except (ValidationError, KeyError, ValueError) as e:
         # logger.warning(e)
         error = responses.LANDING_PAGE_ERROR["bad_input"]
+        print(str(e))
         return JsonResponse({
             "message" : None,
             "error" : responses.LANDING_PAGE_ERROR["bad_input"]
@@ -91,10 +93,12 @@ def contactus(request):
             fail_silently=False
         )
         response_message = responses.LANDING_PAGE_MESSAGE["inquiry_email_send_success"]
+        error = "None"
     except SMTPException as e:
         logger.error("Failed to send email inquiry")
         logger.error(e)
         error = responses.LANDING_PAGE_ERROR["contact_form_email_send_failure"]
+        print(response_message);
 
     return JsonResponse({
         "message": response_message,
