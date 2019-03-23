@@ -255,6 +255,7 @@ float: left;
 
 .sectOne{
      background-image: url("../images/Landing_Page_Img.jpg");min-height: 95vh;
+     display: block !important;
  }
 .sect:before{
     content: '';
