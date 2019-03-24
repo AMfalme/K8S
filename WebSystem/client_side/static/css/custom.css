@@ -526,6 +526,18 @@ color: rgb(18,18,18);
 
 
 }
+#sendInquiryResponse{
+
+
+    background-color: rgb(33, 132, 47);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    width: 230px;
+    height: 100px;
+    margin: 110px auto;
+    display: none;
+}
 .contact div span{
     padding-top: 80px;
     color: #000;

@@ -50,6 +50,7 @@ $(function() {
              console.log(status);
              console.log('error');
               $('#sendInquiryForm').hide();
+               $("#sendInquiryResponse").css('display', 'block');
                $("#sendInquiryResponse").html("<p>" + "Successfully sent"+ "</p>");
               }
               else {
@@ -57,6 +58,7 @@ $(function() {
                 $('#sendInquiryForm').hide();
             $("#sendInquiryForm").hide();
             $("#sendInquiryResponse").css('display','block');
+             $("#sendInquiryResponse").css('background-color','red');
             $("#sendInquiryResponse").html("<p>" + response.error.message  + "</p>");
 
               }
