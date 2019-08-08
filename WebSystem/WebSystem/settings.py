@@ -33,7 +33,8 @@ STATIC_URL = '/static/'
 
 ALLOWED_HOSTS = ['102.164.56.58',
                 "thesteppingstoneselementaryschool.sc.ke",
-                "www.thesteppingstoneselementaryschool.sc.ke"
+                "www.thesteppingstoneselementaryschool.sc.ke",
+                "*"
 ]
 
 
