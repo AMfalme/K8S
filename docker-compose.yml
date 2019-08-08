@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: tsses
+    command: bash -c "python3 WebSystem/manage.py makemigrations && python3 WebSystem/manage.py migrate && python3 WebSystem/manage.py runserver 0.0.0.0:8000"
+    container_name: tsses_service
+    volumes:
+      - .:/opt/home
+    ports:
+      - "8000:8000"
