@@ -10,9 +10,9 @@ spec:
     - name: http
       protocol: "TCP"
       # Port accessible inside cluster
-      port: 8001
+      port: 80
       #Port to forward to inside the pod
-      targetPort: http
+      targetPort: 8000
       #Port accessible outside cluster
       nodePort:  30006
   type: LoadBalancer
@@ -22,7 +22,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: tsses
+  name: tsse
 spec:
   replicas: 2
   selector:
@@ -37,4 +37,4 @@ spec:
         - name: tsses
           image: tsses:v2
           ports:
-            - containerPort: 80
+            - containerPort: 8000
