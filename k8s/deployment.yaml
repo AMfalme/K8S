@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: tss-services
+spec:
+  selector:
+    app: tsses
+  ports:
+    - name: http
+      protocol: "TCP"
+      # Port accessible inside cluster
+      port: 8001
+      #Port to forward to inside the pod
+      targetPort: http
+      #Port accessible outside cluster
+      nodePort:  30006
+  type: LoadBalancer
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: tsses
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tsses
+  template:
+    metadata:
+      labels:
+        app: tsses
+    spec:
+      containers: 
+        - name: tsses
+          image: tsses:v2
+          ports:
+            - containerPort: 80
