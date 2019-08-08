@@ -35,6 +35,6 @@ spec:
     spec:
       containers: 
         - name: tsses
-          image: tsses:v2
+          image: tsses:v3
           ports:
             - containerPort: 8000
