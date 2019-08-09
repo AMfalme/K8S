@@ -6,11 +6,18 @@ from django.core.validators import validate_email
 from django.core.mail import send_mail
 from django.views.decorators.http import require_http_methods
 from django.core.exceptions import ValidationError
-import responses
 from django.http import HttpResponse, JsonResponse
 import json
-
+import responses 
+from smtplib import SMTPException
 # Create your views here.
+
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
+
 
 
 @require_http_methods(["GET"])
@@ -48,15 +55,18 @@ def contactus(request):
         name = data["name"]
         email = data["email"]
         message = data["message"]
-        if not (name and message):
-            raise ValidationError("Missing either 'name' or 'message'")
+        if not (name):
+            raise ValidationError("Missing 'name'")
+        elif not (message):
+            raise ValidationError("Missing'message'")
         validate_email(email)
     except (ValidationError, KeyError, ValueError) as e:
         # logger.warning(e)
-        error = LANDING_PAGE_ERROR["bad_input"]
+        error = responses.LANDING_PAGE_ERROR["bad_input"]
+        print(str(e))
         return JsonResponse({
             "message" : None,
-            "error" : LANDING_PAGE_ERROR["bad_input"]
+            "error" : responses.LANDING_PAGE_ERROR["bad_input"]
         })
 
 
@@ -72,7 +82,7 @@ def contactus(request):
             )
 
 
-    subject = "Website Inquiry: %s" % data["email"]
+    subject = "Website Inquiry Contact us Page"
 
     try:
         send_mail(
@@ -83,10 +93,12 @@ def contactus(request):
             fail_silently=False
         )
         response_message = responses.LANDING_PAGE_MESSAGE["inquiry_email_send_success"]
+        error = "None"
     except SMTPException as e:
-        # logger.error("Failed to send email inquiry")
-        # logger.error(e)
+        logger.error("Failed to send email inquiry")
+        logger.error(e)
         error = responses.LANDING_PAGE_ERROR["contact_form_email_send_failure"]
+        print(response_message);
 
     return JsonResponse({
         "message": response_message,

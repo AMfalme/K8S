@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -23,14 +23,50 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3y9md7110x_qeq&j2@=5&mt_0fonw^oqn8mb*)g#p*uyhf21(9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = '/static/'
+
+ALLOWED_HOSTS = ['102.164.56.58',
+                "thesteppingstoneselementaryschool.sc.ke",
+                "www.thesteppingstoneselementaryschool.sc.ke",
+                "*"
+]
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'home.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'WebSystem': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'WebSystem',
     'client_side',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -55,13 +91,15 @@ ROOT_URLCONF = 'WebSystem.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'client_side'),
+                os.path.join(BASE_DIR, "WebSystem")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                # 'django.core.context_processors.static',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -113,14 +151,27 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+# Configure SMTP
+# NO_REPLY_EMAIL_HOST='smtpserver'
+# NO_REPLY_EMAIL_PORT=587
+# NO_REPLY_EMAIL_HOST_USER="noreply_email"
+# NO_REPLY_EMAIL_HOST_PASSWORD="password"
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "steppingstoneswebpage@gmail.com"
+EMAIL_HOST_PASSWORD = 'Forgetmenot@1'
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
+# Duara Settings
+LANDING_PAGE_INQUIRY_RECIPIENT = "lkitala@yahoo.co.uk"
+LANDING_PAGE_INQUIRY_SENDER = "no-reply@tsses.sc.ke"
 
-STATIC_URL = '/static/'
+
+
 # LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
-LANDING_PAGE_INQUIRY_RECIPIENT = "mfalmegriffin@gmail.com"
+#LANDING_PAGE_INQUIRY_RECIPIENT = "contactus@thesteppingstoneselementaryschool.sc.ke"
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@gmail.com"
 
 try:

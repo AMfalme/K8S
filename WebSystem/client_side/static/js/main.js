@@ -27,15 +27,15 @@ $(function() {
     }
     return cookieValue;
   }
-  $('#contactus').submit(
+  $('#sendInquiryForm').submit(
 
     function(e){
-         console.log('submitted')
+         
       e.preventDefault();
       var form = $(this);
       var data = getFormData(form);
-
-     
+      data.message = $("#contact_message").val();
+   
       $.ajax({
             type: "POST",
             contentType: "application/json",
@@ -46,13 +46,23 @@ $(function() {
             data: JSON.stringify(data),
             success: function (response, status) {
               if (response.error) {
-                console.log(response)
+             console.log(response.error);
+             console.log(status);
+             console.log('error');
+              $('#sendInquiryForm').hide();
+               $("#sendInquiryResponse").css('display', 'block');
+               $("#sendInquiryResponse").html("<p>" + "Successfully sent"+ "</p>");
               }
               else {
-                console.log('success')
+                console.log('success');
+                $('#sendInquiryForm').hide();
+            $("#sendInquiryForm").hide();
+            $("#sendInquiryResponse").css('display','block');
+             $("#sendInquiryResponse").css('background-color','red');
+            $("#sendInquiryResponse").html("<p>" + response.error.message  + "</p>");
+
               }
-              console.log(response);
-              console.log(status);
+             
             }
             ,
             error: function(response, error) {

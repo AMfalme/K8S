@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "tsses-package.fullname" . }}-test-connection"
+  labels:
+{{ include "tsses-package.labels" . | indent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "tsses-package.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

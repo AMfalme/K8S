@@ -1172,6 +1172,18 @@ form{
   padding-top: 40px;
 }
 
+#sendInquiryResponse{
+    height: 50px;
+    background-color: green;
+}
+#sendInquirtResponse p{
+    text-align: center;
+background-color: #24962499;
+width: 50%;
+margin: 100px auto;
+color: #fff;
+padding: 27px;
+}
 .form-line{
   border-right: 1px solid #B29999;
 }
