@@ -7,8 +7,13 @@ This is a replica of a kubernetes cluster setup and containerizing of the django
 
 ```sh
 cd [working directory]
-docker build -t [image_name] .
+docker build -t [image_name:version] .
+
+###this command will run the docker container based on the image built above
+docker run -p 8000:8000 [image_name:version]
 ```
+visit localhost:8000 to view the running instance
+
 
 2. if you are using minikube for testing, ensure minikube and run the below commands.
 
